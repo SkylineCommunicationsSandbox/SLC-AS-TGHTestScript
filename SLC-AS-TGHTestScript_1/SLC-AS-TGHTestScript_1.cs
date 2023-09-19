@@ -55,12 +55,13 @@ namespace SLC_AS_TGHTestScript_1
 	using System.Collections.Generic;
 	using System.Globalization;
 	using System.Text;
+    using Empower.Library.Room0;
 	using Skyline.DataMiner.Automation;
-	
-	/// <summary>
-	/// Represents a DataMiner Automation script.
-	/// </summary>
-	public class Script
+
+    /// <summary>
+    /// Represents a DataMiner Automation script.
+    /// </summary>
+    public class Script
 	{
 		/// <summary>
 		/// The script entry point.
@@ -69,6 +70,9 @@ namespace SLC_AS_TGHTestScript_1
 		public void Run(IEngine engine)
         {
             engine.GenerateInformation("Hello World! ~Thomas GH");
-		}
+
+            var order = OrderFactory.CreateOrder("40 Pizzas please <3");
+            order.Dispatch("Thomas Ghysbrecht");
+        }
 	}
 }
