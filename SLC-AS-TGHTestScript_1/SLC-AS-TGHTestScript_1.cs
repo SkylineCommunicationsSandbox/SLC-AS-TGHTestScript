@@ -71,7 +71,7 @@ namespace SLC_AS_TGHTestScript_1
         {
             engine.GenerateInformation("Hello World! ~Thomas GH");
 
-            var order = OrderFactory.CreateOrder("40 Pizzas please <3");
+            var order = OrderFactory.CreateOrder("Jan's Change 40 Pizzas please <3");
             order.Dispatch("Thomas Ghysbrecht");
         }
 	}
